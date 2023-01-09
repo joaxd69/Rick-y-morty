@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useLocation } from "react-router-dom"
 import { cleanState, getfavourites, getinfobyid } from "../../redux/Actions/Actions"
@@ -21,10 +21,9 @@ export default function Details (){
 
    return(
         <div> 
-            <button >clean state</button>
             <h1>{Card&&Card.name}</h1>
             <h2>The character is {Card&&Card.status}</h2>
-            <img src={Card&&Card.image} alt="image" />
+            <img src={Card&&Card.image} alt="img" />
             <h5>The character location is : {Card.location&&Card.location.name}</h5>
             <button onClick={handleFavourites}>Add to my cards</button>
         </div>

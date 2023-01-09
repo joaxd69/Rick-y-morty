@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
 import { filterbystatus } from "../../redux/Actions/Actions";
 
 export default function Filters({total,setCurrentPage}){
