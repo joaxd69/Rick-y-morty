@@ -1,13 +1,9 @@
-import { useState } from "react"
-import  {useSelector, useDispatch } from 'react-redux'
-import { getcharacters } from "../../redux/Actions/Actions"
+import  { useDispatch } from 'react-redux'
 import {Link} from 'react-router-dom'
 export default  function Cards({cards}){
      const dispatch=useDispatch()
      
-     const HandleDispatch=()=>dispatch(getcharacters())
-    
-    return (
+     return (
         <div>
             {cards&&cards.map((i,key)=>
             <div key={key}>
@@ -17,9 +13,6 @@ export default  function Cards({cards}){
                 <img src={i.image} alt="img" />
             </div>
             )}
-
-            <button onClick={HandleDispatch} >Dispatch</button>
-            
         </div>
     )
 } 

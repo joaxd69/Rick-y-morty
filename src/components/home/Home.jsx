@@ -14,6 +14,8 @@ export default function Home(){
     const cardsInpage =Allcards&&Allcards.slice(firstCardindex,lastCardindex)
     
     const handleChangePage=(e)=>setCurrentPage(e.target.value)
+
+    const ChangesCardsperPage=(e)=>setcardsPerPage(e.target.value)
  
     return (
 
@@ -22,6 +24,14 @@ export default function Home(){
             <h1>Home</h1>
             <Searchbar
             setPage={setCurrentPage}/>
+            <div>
+                <span>Cards per page:</span>
+                <button onClick={ChangesCardsperPage} value={4}>4</button>
+                <button onClick={ChangesCardsperPage} value={8}>8</button>
+                 <button onClick={ChangesCardsperPage} value={16}>16</button>
+            </div>
+             
+               
             <Paginate
              totalcards={Allcards.length}
              cardsperpage={cardsPerPage}
@@ -30,6 +40,13 @@ export default function Home(){
              
             <Cards
             cards={cardsInpage}/>
+
+            <Paginate
+             totalcards={Allcards.length}
+             cardsperpage={cardsPerPage}
+             handleChangePage={handleChangePage}
+             currentpage={currentPage}/>
+             
     
         </div>
     )
