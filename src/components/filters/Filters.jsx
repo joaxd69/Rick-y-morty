@@ -8,8 +8,8 @@ export default function Filters({total,setCurrentPage}){
     return(
         <div>
             <span>Filter character by status :</span>
-            <select onClick={handleFilter}>
-                <option >All status</option>
+            <select onChange={handleFilter}>
+                <option >All</option>
                 <option>Alive</option>
                 <option>Dead</option>
             </select>
