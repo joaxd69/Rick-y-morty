@@ -6,6 +6,7 @@ export const GET_INFO_BY_ID='GET_INFO_BY_ID';
 export const CLEAN_STATE='CLEAN_STATE'
 export const GET_FAVOURITES='GET_FAVOURITES';
 export const DELETE_FAVOURITES='DELETE_FAVOURITES';
+export const FILTER_BY_STATUS='FILTER_BY_STATUS'
 
 export const getcharacters=()=>{
     return async(dispatch)=>{
@@ -56,5 +57,12 @@ export const deletefavourites=(card)=>{
     return{
         type:DELETE_FAVOURITES,
         payload:card
+    }
+}
+
+export const filterbystatus=(status)=>{
+    return{
+        type:FILTER_BY_STATUS,
+        payload:status
     }
 }

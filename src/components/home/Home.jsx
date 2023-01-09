@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import Cards from '../cards/Cards'
+import Filters from "../filters/Filters";
 import Paginate from "../Paginate/Paginate";
 import Searchbar from "../Searchbar/Searchbar";
 
@@ -15,7 +16,7 @@ export default function Home(){
     
     const handleChangePage=(e)=>setCurrentPage(e.target.value)
 
-    const ChangesCardsperPage=(e)=>setcardsPerPage(e.target.value)
+    const ChangesCardsperPage=(e)=>{setcardsPerPage(e.target.value);setCurrentPage(1)}
  
     return (
 
@@ -24,6 +25,9 @@ export default function Home(){
             <h1>Home</h1>
             <Searchbar
             setPage={setCurrentPage}/>
+            <Filters
+             total={Allcards.length}
+             setCurrentPage={setCurrentPage}/>
             <div>
                 <span>Cards per page:</span>
                 <button onClick={ChangesCardsperPage} value={4}>4</button>

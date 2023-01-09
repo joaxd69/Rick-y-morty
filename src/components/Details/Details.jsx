@@ -26,8 +26,7 @@ export default function Details (){
             <h2>The character is {Card&&Card.status}</h2>
             <img src={Card&&Card.image} alt="image" />
             <h5>The character location is : {Card.location&&Card.location.name}</h5>
-            <button onClick={handleFavourites}>add to my cards</button>
-            
+            <button onClick={handleFavourites}>Add to my cards</button>
         </div>
     )
 }

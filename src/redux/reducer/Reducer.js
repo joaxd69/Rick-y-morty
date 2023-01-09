@@ -1,4 +1,4 @@
-import { CLEAN_STATE, DELETE_FAVOURITES, GET_BY_NAME, GET_CHARACTERS, GET_FAVOURITES, GET_INFO_BY_ID } from "../Actions/Actions"
+import { CLEAN_STATE, DELETE_FAVOURITES, FILTER_BY_STATUS, GET_BY_NAME, GET_CHARACTERS, GET_FAVOURITES, GET_INFO_BY_ID } from "../Actions/Actions"
 
 const initialState = {
     Cards:[],//original el que se renderiza
@@ -59,6 +59,15 @@ export default function reducer (state=initialState,action){
         return {
           ...state,
           Favourites:card
+        }
+
+      case FILTER_BY_STATUS:
+        const ordercards= action.payload==='Alive'?state.AuxiliarCards.filter(i=>i.status==='Alive'):
+                          action.payload==='Dead'?state.AuxiliarCards.filter(i=>i.status==='Dead'):
+                          state.AuxiliarCards
+        return{
+           ...state,
+           Cards:ordercards
         }
      default:
         return state
