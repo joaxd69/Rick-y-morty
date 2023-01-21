@@ -9,7 +9,7 @@ export default function Paginate({cardsperpage,totalcards,handleChangePage,curre
     
       return(
         <div>
-               <h6>Hi you are in page: {currentpage}</h6>
+               <h6>Hi my friend you are in page: {currentpage} now</h6>
               {array.map((i,key)=>
                 <button key={key} onClick={handleChangePage} value={i} >{i}</button>
                 )}

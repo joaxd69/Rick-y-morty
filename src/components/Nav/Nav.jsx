@@ -19,7 +19,7 @@ export default function Nav(){
           <button>home</button>
           </Link>
           <Link to='/about'>
-            <button>About</button>
+            <button>About creator</button>
           </Link>
           </div>
           
