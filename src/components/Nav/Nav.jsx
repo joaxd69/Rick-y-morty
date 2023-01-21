@@ -22,7 +22,7 @@ export default function Nav(){
             <button>About</button>
           </Link>
           </div>
-          
+        
         </div>
         
     )

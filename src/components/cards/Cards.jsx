@@ -1,8 +1,6 @@
-import  { useDispatch } from 'react-redux'
 import {Link} from 'react-router-dom'
 export default  function Cards({cards}){
-     const dispatch=useDispatch()
-
+   
      return (
         <div>
             {cards&&cards.map((i,key)=>
