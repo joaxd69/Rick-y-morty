@@ -2,9 +2,27 @@
     background-color: rgb(44, 39, 39);
     width: 250px;
     height: 250px;
+
+}
+
+.container{
+    background-image: url("https://www.pngall.com/wp-content/uploads/4/Rick-And-Morty-PNG-Image.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 700px;
+    margin: 0 auto;
+    width: 400px;
 }
 .buttons{
     display: inline-block;
-    height: 60px;
-    width: 50px;
+    padding: 15px;
+    background-color: rgb(6, 187, 6);
+    color: rgb(0, 0, 0);
+    font-size:larger;
+    border: none;
+    cursor: pointer;
+}
+.buttons:hover{
+  padding: 17px;
+
 }
